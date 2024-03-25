@@ -19,38 +19,39 @@ class MyHomePage extends StatelessWidget {
           icon: const Icon(Icons.logout),
             )],),
         
-        body:Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
+        body:ListView(
+          scrollDirection: Axis.horizontal,
+            children: [
+              Container(
+                height: 350,
+                width: 350,
+                    decoration: BoxDecoration(
+              color: Colors.deepPurple,
+              borderRadius: BorderRadius.circular(15)
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(25),
+                      child: Icon(Icons.favorite,
+                      color: Colors.red,)
+                    ),
+              
+              ),
             Container(
-              height: 200,
+              color: Colors.red,
+              height: 350,
               width: 200,
-                  decoration: BoxDecoration(
-            color: Colors.deepPurple,
-            borderRadius: BorderRadius.circular(15)
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(25),
-                    child: Icon(Icons.favorite,
-                    color: Colors.red,)
-                  ),
-            
             ),
-          Container(
-            color: Colors.red,
-            height: 200,
-            width: 200,
+            Container(
+              height: 400,
+              width: 200,
+              color: Colors.green,
+            )
+            ],
           ),
-          Container(
-            height: 200,
-            width: 200,
-            color: Colors.green,
-          )
-          ],
         ),
 
 
 
-      ));
+      );
   }
 }
