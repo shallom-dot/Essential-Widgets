@@ -1,10 +1,11 @@
+import 'package:esential_widget/pages/secondpage.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class MyHomePage extends StatelessWidget {
    MyHomePage({super.key});
 
-  List names = ['mary', 'jane', 'Mitchell'];
+  
 
   @override
   Widget build(BuildContext context) {
@@ -23,22 +24,20 @@ class MyHomePage extends StatelessWidget {
             )],),
         
         body:
-            Center(
-              child: GestureDetector(
-                onTap: () {
-                  // ignore: avoid_print
-                  print('Hello world');
-                },
-                child: Container(
-                  height: 300,
-                  width: 300,
-                  color: Colors.deepPurple[400],
-                ),
+            Column(
+              mainAxisSize:MainAxisSize.min,
+              children: [
+                ElevatedButton(
+                  
+                                child: Center(child: Text('Tap Tap')),
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage()
+                                  ));
+                                },
+                    ),
+              ],
+            ),
               ),
-            )
-  
-        ),
-           
         );
   }
 }
