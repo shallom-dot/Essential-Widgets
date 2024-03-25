@@ -8,7 +8,19 @@ class MyHomePage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.deepPurple[200],
+        appBar: AppBar(
+          title: Text('My App Bar'),
+          backgroundColor: Colors.deepPurple,
+          elevation: 0,
+          leading: Icon(Icons.menu),
+          actions: [
+            IconButton(
+              onPressed: () {},
+          icon: Icon(Icons.logout),
+            )],),
+        
         body:Center(
+
           child: Container(
             height: 300,
             width: 300,
@@ -18,12 +30,8 @@ class MyHomePage extends StatelessWidget {
                 ),
                 child: const Padding(
                   padding: EdgeInsets.all(25),
-                  child: Text('Roselyn Tobin',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),),
+                  child: Icon(Icons.favorite,
+                  color: Colors.red,)
                 ),
           
           ),
