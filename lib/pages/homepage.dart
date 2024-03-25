@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class MyHomePage extends StatelessWidget {
    MyHomePage({super.key});
 
@@ -21,31 +22,23 @@ class MyHomePage extends StatelessWidget {
           icon: const Icon(Icons.logout),
             )],),
         
-        body:Stack(
-          alignment: Alignment.bottomCenter,
-          children: [
-            Container(
-              height: 300,
-              width: 300,
-              color: Colors.deepPurple,
-            ),
-            Container(
-              height: 200,
-              width: 200,
-              color: Colors.deepPurple[400],
-            ),
-            Container(
-              height: 100,
-              width: 100,
-              color: Colors.deepPurple[200],
+        body:
+            Center(
+              child: GestureDetector(
+                onTap: () {
+                  // ignore: avoid_print
+                  print('Hello world');
+                },
+                child: Container(
+                  height: 300,
+                  width: 300,
+                  color: Colors.deepPurple[400],
+                ),
+              ),
             )
-          ],
-        )
-           
+  
         ),
-
-
-
-      );
+           
+        );
   }
 }
