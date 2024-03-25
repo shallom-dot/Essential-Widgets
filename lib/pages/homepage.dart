@@ -1,4 +1,3 @@
-import 'package:esential_widget/pages/secondpage.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -31,8 +30,8 @@ class MyHomePage extends StatelessWidget {
                   
                                 child: Center(child: Text('Tap Tap')),
                                 onPressed: () {
-                                  Navigator.push(context, MaterialPageRoute(builder: (context) => SecondPage()
-                                  ));
+                                  Navigator.pushNamed(context, '/secondpage');
+                                    
                                 },
                     ),
               ],
