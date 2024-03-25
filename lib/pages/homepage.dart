@@ -9,32 +9,44 @@ class MyHomePage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.deepPurple[200],
         appBar: AppBar(
-          title: Text('My App Bar'),
+          title: const Text('My App Bar'),
           backgroundColor: Colors.deepPurple,
           elevation: 0,
-          leading: Icon(Icons.menu),
+          leading: const Icon(Icons.menu),
           actions: [
             IconButton(
               onPressed: () {},
-          icon: Icon(Icons.logout),
+          icon: const Icon(Icons.logout),
             )],),
         
-        body:Center(
-
-          child: Container(
-            height: 300,
-            width: 300,
-                decoration: BoxDecoration(
-          color: Colors.deepPurple,
-          borderRadius: BorderRadius.circular(15)
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(25),
-                  child: Icon(Icons.favorite,
-                  color: Colors.red,)
-                ),
-          
+        body:Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 200,
+              width: 200,
+                  decoration: BoxDecoration(
+            color: Colors.deepPurple,
+            borderRadius: BorderRadius.circular(15)
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.all(25),
+                    child: Icon(Icons.favorite,
+                    color: Colors.red,)
+                  ),
+            
+            ),
+          Container(
+            color: Colors.red,
+            height: 200,
+            width: 200,
           ),
+          Container(
+            height: 200,
+            width: 200,
+            color: Colors.green,
+          )
+          ],
         ),
 
 
