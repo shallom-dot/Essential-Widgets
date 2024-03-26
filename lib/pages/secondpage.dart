@@ -9,8 +9,19 @@ class SecondPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('space@'),
       ),
-      body: Container(
-        color: Colors.deepPurple,
-      )
+      body:  Column(
+              mainAxisSize:MainAxisSize.min,
+              children: [
+                ElevatedButton(
+                  
+                                child: const Center(child: Text('Tap Tap')),
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/secondpage');
+                                    
+                                },
+                    ),
+              ],
+            ),
+           
     );
 }}
